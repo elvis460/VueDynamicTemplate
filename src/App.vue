@@ -1,11 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <hello v-if="currentView == 'component-hello'"></hello>
-    <hi v-if="currentView == 'component-hi'"></hi> 
-    <br>
-    <button @click="currentView = 'component-hello'">Component Hello</button>
-    <button @click="currentView = 'component-hi'">Component Hi</button>
+    <component :is="currentView" transition="fade" transition-mode="out-in"></component>
+    <button @click="currentView = 'hello'">Component Hello</button>
+    <button @click="currentView = 'hi'">Component Hi</button>
   </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
   },
   data () {
     return {
-      currentView: 'aa',
+      currentView: 'hello',
     }
   }
 }

@@ -15,7 +15,7 @@
 export default {
   data () {
     return {
-      msg: 'I am Villager',
+      intro: 'I am Villager',
       language: ['ruby', 'vue.js']
     }
   }
