@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <hello></hello>
+    <hello v-if="currentView == 'component-a'"></hello>
+    <br>
+    <button @click="currentView = 'component-a'">Show component</button>
+    <button @click="currentView = 'close'">Close component</button>
   </div>
 </template>
 
@@ -12,6 +15,11 @@ export default {
   name: 'app',
   components: {
     Hello
+  },
+  data () {
+    return {
+      currentView: 'aa',
+    }
   }
 }
 </script>
