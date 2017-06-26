@@ -9,12 +9,12 @@
       </ul>
     </div>
     <div class="">
-    <input type="text" v-model="input_val">
-    <p>Input value : {{input_val}}</p>
-  </div>
-  <div class="btn">
-    <button v-on:click="counter++">Clciked {{counter}} times!!!</button>
-  </div>
+      <input type="text" v-model="input_val">
+      <p>Input value : {{input_val}}</p>
+    </div>
+    <div class="btn">
+      <button v-on:click="counter++">Clciked {{counter}} times!!!</button>
+    </div>
   </div>
 </template>
 
