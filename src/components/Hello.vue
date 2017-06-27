@@ -15,6 +15,8 @@
     <div class="btn">
       <button v-on:click="counter++">Clciked {{counter}} times!!!</button>
     </div>
+        <p>id: {{$route.params.id}} </p>
+
   </div>
 </template>
 

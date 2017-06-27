@@ -1,9 +1,18 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <component :is="currentView" transition="fade" transition-mode="out-in"></component>
-    <button @click="currentView = 'hello'">Component Hello</button>
-    <button @click="currentView = 'hi'">Component Hi</button>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+    <div class="controls">
+      <router-link :to="{ name: 'hello', params: { id: parseInt($route.params.id)}}">
+        Hello {{$route.params.id}}
+      </router-link> 
+      <br>
+      <router-link :to="{ name: 'hi', params: { id: parseInt($route.params.id) }}">
+        Hi {{$route.params.id}}
+      </router-link>
+    </div>
   </div>
 </template>
 
