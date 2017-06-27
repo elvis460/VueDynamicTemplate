@@ -4,7 +4,7 @@
     <div class="">
       
       <ol>
-        <span>I am praciting :</span>
+        <span>I am practicing :</span>
         <li v-for="lng in language">{{lng}}</li>
       </ol>
     </div>
